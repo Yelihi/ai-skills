@@ -2,21 +2,7 @@
 description: FSD(Feature-Sliced Design) 에 대한 참고문서
 ---
 
-## Purpose
-
 FSD(Feature-Sliced Design) 아키텍처에 대한 문서입니다.
-
-## Reference Architectures
-
-### Primary Reference: `src/pages/ai-tutor/`
-
-복잡한 페이지 구조의 표준 참조 (Adapter, Models, Services, UI 전체 레이어 활용)
-
-### Secondary References
-
-- **`src/pages/auth/`**: Form 처리 및 TanStack Form 통합 패턴
-- **`src/pages/class-management/`**: 단순 페이지 구조 (Adapter 없이 Services 직접 사용)
-- **`src/widgets/search-students/`**: Widget 레벨 FSD 구조, Strategy 패턴, Registry 패턴
 
 ## FSD Layer Structure
 
@@ -49,6 +35,8 @@ pages/[page-name]/
         ├── Component.tsx
         └── Component.stories.ts
 ```
+
+- 만일 next.js 내에서 작업이라면 pages -> views 로 변경합니다.
 
 ### Widgets Layer (`src/widgets/[widget-name]/`)
 
