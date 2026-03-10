@@ -208,6 +208,34 @@ export interface {Action}{Entity}ResponseDto {
 
 ---
 
+### `models/behaviors/{Entity}Behavior.ts`
+
+```typescript
+export interface {Entity}BehaviorStructure {
+  // 필요한 메서드 선언
+}
+
+export class {Entity}Behavior implements {Entity}BehaviorStructure {
+  // 필요한 메서드 구현
+  create = (entity: {Entity}Dto) => {
+    // entity 기반의 비즈니스 로직 구현
+  }
+}
+
+
+// index.ts
+export const {Entity}Behavior = new {Entity}Behavior();
+
+// 혹은 tsyringe 를 사용한다면
+export const { {Entity}BehaviorStructure } from './behaviors/{Entity}Behavior';
+```
+
+**규칙**
+- behavior 구현체의 목적은 해당 entity 기반의 비즈니스 로직 구현입니다.
+- 따라서 순수 자바스크립트 로직 외 어떠한 라이브러리 (tsyringe 제외)도 사용하지 않습니다.
+- 또한 인자로 entity 를 전달 받습니다. (ex: create(entity: {Entity}Dto))
+- 반대로 entity 를 기반으로 한 로직 구현이 아니라면 behavior 에 적합하지 않습니다.
+
 ### `models/repository.ts`
 
 ```typescript
