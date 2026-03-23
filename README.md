@@ -26,4 +26,5 @@ npx skills add Yelihi/ai-skills
 | `web-design-guidelines` | UI 코드의 웹 인터페이스 가이드라인 준수 여부 리뷰 | Vercel |
 | `vercel-react-best-practices` | React/Next.js 성능 최적화 가이드 (58개 규칙, 8개 카테고리) | Vercel |
 | `vercel-composition-patterns` | React 컴포지션 패턴 가이드 (boolean prop 남용 방지, compound component 등) | Vercel |
-
+| `obsidian` | Obsidian 마크다운 파일 관리 및 구조화 가이드 | BitBonsai |
+| `verify-pipeline` | `quickstart-custom-plate` 내 템플릿 또는 scaffold 로직 변경 후 전체 검증 파이프라인 실행 | 자체 제작 |
