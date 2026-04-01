@@ -1,17 +1,10 @@
 ---
 name: obsidian-md-reviewer
-description: Obsidian에서 작성한 .md 문서를 git push 전에 검토하고, PLAN 모드로
-개선 계획을 제시한 뒤, 사용자가 승인한 내용만 적용하도록 돕는 스킬이다. 사용자가
-"obs-review: PLAN", "obs-review: APPLY", "obs-review: REVIEW file=...md" 같은
-명령어 스타일 요청을 하거나, "마크다운 문서 정리해줘"처럼 Obsidian 노트를
-블로그 글처럼 다듬고 싶을 때 사용한다. 문장의 자연스러움, 문단 구조, 프로그래밍
-개념의 정확성, 코드 사용 방식, 글의 기승전결을 종합적으로 개선한다.
+description: Obsidian에서 작성한 .md 문서를 git push 전에 검토하고, PLAN 모드로 개선 계획을 제시한 뒤, 사용자가 승인한 내용만 적용하도록 돕는 스킬이다. 사용자가 "obs-review PLAN", "obs-review APPLY", "obs-review REVIEW file=...md" 같은 명령어 스타일 요청을 하거나, "마크다운 문서 정리해줘"처럼 Obsidian 노트를 블로그 글처럼 다듬고 싶을 때 사용한다. 문장의 자연스러움, 문단 구조, 프로그래밍 개념의 정확성, 코드 사용 방식, 글의 기승전결을 종합적으로 개선한다.
 license: MIT
-compatibility: "Obsidian vault가 git 저장소와 연동된 환경에서 최적으로 동작한다.
-변경된 .md 파일 목록과 파일 내용을 터미널/스크립트를 통해 Claude에게 전달할 수
-있을 때 가장 잘 작동한다."
+compatibility: "Obsidian vault가 git 저장소와 연동된 환경에서 최적으로 동작한다. 변경된 .md 파일 목록과 파일 내용을 터미널/스크립트를 통해 Claude에게 전달할 수 있을 때 가장 잘 작동한다."
 metadata:
-  author: your-name
+  author: yelihi
   version: 1.0.0
   category: writing
   tags: [obsidian, markdown, writing, code-review, git]
