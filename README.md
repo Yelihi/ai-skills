@@ -15,6 +15,30 @@ vercel cli 를 활용하면 쉽게 적용할 수 있습니다.
 npx skills add Yelihi/ai-skills
 ```
 
+### 하네스 세트 한 번에 설치
+
+프론트엔드 하네스 엔지니어링(설계 → 구현 → 테스트 → 검증)을 돌리려면 단계 skill뿐 아니라 그들이 **위임**하는 의존성 skill까지 필요합니다(총 19개). 매번 손으로 고르지 않도록 설치 스크립트를 제공합니다.
+
+```bash
+# 적용할 프로젝트 루트에서 실행 — 정확히 19개만 설치
+curl -fsSL https://raw.githubusercontent.com/Yelihi/ai-skills/main/scripts/install-harness.sh | bash
+
+# 전역 설치하려면 인자를 그대로 전달
+curl -fsSL https://raw.githubusercontent.com/Yelihi/ai-skills/main/scripts/install-harness.sh | bash -s -- -g
+```
+
+설치되는 19개 (스크립트 [`scripts/install-harness.sh`](scripts/install-harness.sh)에 정의):
+
+| 단계 | skills |
+|------|--------|
+| 설계 | `ddd-architecture` · `spec-advisor` · `architecture-design` · `design-system-spec` · `feature-checklist` |
+| 구현 | `figma-to-tsx` · `component-builder` |
+| 테스트 | `frontend-test-principles` · `frontend-test-suite` |
+| 검증 | `type-checker` · `code-cleaner` · `code-quality` · `a11y-checker` · `performance-checker` |
+| 위임 의존성 | `clean-architecture` · `vercel-composition-patterns` · `vercel-react-best-practices` · `web-design-guidelines` · `karpathy-guidelines` |
+
+> 식별자는 각 skill의 frontmatter `name` 값입니다(디렉터리명과 다를 수 있음: `domain-driven-architecture-agent` → `ddd-architecture`, `fsd-clean-architecture` → `clean-architecture`).
+
 ### 현재 작성된 skills 목록
 
 | 스킬 | 설명 | 출처 |
